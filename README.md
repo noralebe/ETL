@@ -2,6 +2,8 @@
 Used large datasets, transformed, cleansed in pandas and loaded to PostGreSQL for querying
 
 Extract
+
+
 Obtained a file from Kaggle.com on World Happiness Report and the United States International Census
 Age Specific Fertility. Data for the World Happiness had a range of years from 2015 to 2017 by country.
 Data for age specific fertility had a wider range of years by country. We decided to focus our data on
@@ -11,6 +13,8 @@ API. This data was then downloaded to a csv.
 
 
 Transform
+
+
 We began by cleansing the data from the World Happiness Report. This data was provided in 3
 different csv files. Each file represented a different year. Upon inspection of the data we found that
 some columns had data that were not in the other years’ csv’s and their titles were not similar but the
@@ -29,6 +33,8 @@ of data. We performed calculations on the data for the Average fertility rate ac
 
 
 Load
+
+
 Our created DataFrame was now ready to be loaded into our database. We created an engine to
 connect to Postgres. Our data was successfully loaded into Postgres.
 We chose this data because we came across data about Fertility by country on Kaggle.com. We thought
