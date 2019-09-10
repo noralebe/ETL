@@ -1,5 +1,6 @@
 # ETL
 Used large datasets, transformed, cleansed in pandas and loaded to PostGreSQL for querying
+
 Extract
 Obtained a file from Kaggle.com on World Happiness Report and the United States International Census
 Age Specific Fertility. Data for the World Happiness had a range of years from 2015 to 2017 by country.
@@ -7,6 +8,8 @@ Data for age specific fertility had a wider range of years by country. We decide
 the years of 2015-2017 by country. The data from the United States International Census on Age
 Specific Fertility was downloadable through google cloud platform’s public dataset using the BigQuery
 API. This data was then downloaded to a csv.
+
+
 Transform
 We began by cleansing the data from the World Happiness Report. This data was provided in 3
 different csv files. Each file represented a different year. Upon inspection of the data we found that
@@ -23,6 +26,8 @@ At this point we have 2 csv that have been viewed and cleansed in Pandas. These 
 merged using an outer join on Country and Year and put into a DataFrame. We used the dropna to drop
 any row of data that did not have all data satisfied in both files. We were left with one file with 447 rows
 of data. We performed calculations on the data for the Average fertility rate across all ages.
+
+
 Load
 Our created DataFrame was now ready to be loaded into our database. We created an engine to
 connect to Postgres. Our data was successfully loaded into Postgres.
